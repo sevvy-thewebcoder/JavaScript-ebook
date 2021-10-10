@@ -1,0 +1,214 @@
+/* CSS VARIABLES */
+
+:root {
+	--text-color: rgba(220, 220, 220, 1);
+	--bg-color: rgba(123, 44, 93, 1);
+	--nav-bgColor: rgba(162, 107, 141, 1);
+	--code-color: rgba(164, 164, 0, 1);
+}
+
+/* REST DEFAULTS */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* UTILITIES */
+
+.main-section {
+	margin: 5rem 0;
+}
+
+header {
+	padding: 1rem 0;
+}
+
+header h2 {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+article {
+	margin: 1rem 0;
+}
+
+article p {
+	margin: 0.5rem 0;
+}
+
+ul {
+	margin: 1rem 2rem;
+}
+
+ul li {
+	margin: 0.5rem 0;
+}
+
+code {
+	display: block;
+	margin: 2rem 0;
+	padding: 2rem;
+	background: var(--code-color);
+	border-radius: 10px;
+}
+
+hr {
+	height: 2px;
+	background-color: rgba(164, 164, 0, 1);
+	border-radius: 10px;
+	margin-top: 3rem;
+}
+
+/* CSS STYLING : BODY SECTION */
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	padding: 2%;
+	font-family: "Saira", sans-serif;
+	line-height: 1.7;
+	letter-spacing: 2px;
+}
+
+/* CSS STYLING : MAIN CONTAINER */
+
+.main-container {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+/* CSS STYLING : NAVIGATION SECTION */
+
+#navbar {
+	display: block;
+	background-color: var(--nav-bgColor);
+	width: 25%;
+	height: 96%;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	position: fixed;
+	border-right: 2px solid rgba(164, 164, 0, 1);
+}
+
+.nav-container {
+	display: block;
+}
+
+.nav-header {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	color: var(--bg-color);
+}
+
+#navbar div {
+	display: block;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 84%;
+}
+
+.nav-link {
+	display: block;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: var(--nav-bgColor);
+	color: var(--text-color);
+	width: 100%;
+	height: auto;
+	font-size: 0.7rem;
+	cursor: pointer;
+	padding: 2rem 1rem 2rem 2rem;
+	justify-content: center;
+	border-top: 1px solid var(--bg-color);
+	transition-property: all;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+
+.nav-link:first-child {
+	margin-top: 0;
+}
+
+.nav-link:hover {
+	background-color: rgba(123, 44, 93, 1);
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 2rem 0 2rem 1rem;
+}
+
+.nav-link:active {
+	background-color: rgba(164, 164, 0, 1);
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 2rem 0 2rem 1rem;
+}
+
+#main-doc {
+	display: inline-block;
+	position: relative;
+	left: 27%;
+	width: 73%;
+	padding: 0 2rem;
+	text-align: justify;
+}
+
+#Reference article ul li a {
+	color: rgba(164, 164, 0, 1);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 320px) and (max-width: 767px) {
+	/* CSS STYLING : MAIN CONTAINER */
+
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+
+	#navbar {
+		display: block;
+		background-color: var(--nav-bgColor);
+		width: 100%;
+		margin-bottom: 0;
+		position: relative;
+		border: none;
+	}
+
+	.nav-container {
+		display: block;
+	}
+
+	.nav-header {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 1rem 0;
+		color: var(--bg-color);
+	}
+
+	#navbar div {
+		display: none;
+	}
+
+	#main-doc {
+		display: block;
+		position: relative;
+		left: 2%;
+		width: 100%;
+		font-size: 0.8rem;
+		text-align: justify;
+	}
+
+	.main-section header h2 {
+		font-size: 1.2rem;
+	}
+}
